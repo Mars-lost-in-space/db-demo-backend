@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import AddEmployeeForm from '../components/AddEmployeeForm'
+import Navbar from '../../components/Navbar'
+import AddEmployeeForm from '../../components/Employee/AddEmployeeForm'
 
 const AddEmployee = () => {
   return (
