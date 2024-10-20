@@ -38,6 +38,7 @@ async function updateEmployee(employee) {
 
 async function deleteEmployee(id) {
     const connection = await oracledb.getConnection();
+    console.log(id);
     const result = await connection.execute(
         `DELETE FROM employees WHERE employee_id = :id`,
         [id]

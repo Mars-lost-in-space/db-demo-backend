@@ -52,6 +52,7 @@ async function updateEmployee(req, res) {
 async function deleteEmployee(req, res) {
     const id = req.params.id;
     try {
+        console.log("deleting");
         const result = await employeeModel.deleteEmployee(id);
         if (result.rowsAffected === 0) {
             return res.status(404).send('Employee not found');
