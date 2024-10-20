@@ -17,8 +17,8 @@ async function getEmployeeById(id) {
 async function insertEmployee(employee) {
     const connection = await oracledb.getConnection();
     const result = await connection.execute(
-        `INSERT INTO employees (employee_id, name, position, salary) VALUES (:id, :name, :position, :salary)`,
-        [employee.id, employee.name, employee.position, employee.salary]
+        `INSERT INTO employees (employee_id, first_name, last_name, email, phone_number, job_id, salary, commission_pct, manager_id, department_id, hire_date) VALUES (:employee_id, :first_name, :last_name, :email, :phone_number, :job_id, :salary, :commission_pct, :manager_id, :department_id, TO_DATE(:hire_date,'yyyy-MM-dd'))`,
+        [employee.employee_id, employee.first_name, employee.last_name, employee.email, employee.phone_number, employee.job_id, employee.salary, employee.commision_pct, employee.manager_id, employee.department_id, employee.hire_date]
     );
     await connection.commit(); // Commit the transaction
     await connection.close();
