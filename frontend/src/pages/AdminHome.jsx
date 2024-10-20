@@ -8,7 +8,7 @@ export const AdminHome = () => {
   const [employees, setEmployees] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/employees/`, {
+        fetch(`http://localhost:5000/api/employees/`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

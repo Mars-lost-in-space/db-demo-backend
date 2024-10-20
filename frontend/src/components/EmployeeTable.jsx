@@ -4,7 +4,7 @@ const EmployeeTable = ({ employees }) => {
    
     const handleDelete = async (employeeId) => {
         try {
-            const response = await fetch(`http://localhost:5000/employees/${employeeId}`, {
+            const response = await fetch(`http://localhost:5000/api/employees/${employeeId}`, {
                 method: 'DELETE',
             });
             if (response.ok) {

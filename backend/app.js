@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware to enable CORS
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/employees', employeeRoutes);
+app.use('/api/employees', employeeRoutes);
 
 //start the database connection pool
 getConnection().then(() => {

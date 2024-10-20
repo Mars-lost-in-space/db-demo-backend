@@ -36,7 +36,7 @@ const AddEmployeeForm = () => {
 
         try {
             // Sending the form data to the backend
-            const response = await fetch('http://localhost:5000/employees/', {
+            const response = await fetch('http://localhost:5000/api/employees/', {
               method: 'POST', // Use POST to send data
               headers: {
                 'Content-Type': 'application/json' // Send as JSON
